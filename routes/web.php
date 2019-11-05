@@ -25,4 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/pages/test1','PagesController@test1')->name('test1');
 
-Route::get('/projects/projects','ProjectsController@projects')->name('projects');
+Route::get('/projects','ProjectsController@index');
+Route::post('/projects','ProjectsController@store');
+
+Route::get('/projects/create','ProjectsController@create');
