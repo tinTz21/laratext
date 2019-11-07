@@ -1,16 +1,17 @@
 @extends('layouts.master')
 @section('contents')
 
-	<form method="POST" action="/projects">
+	<form action="/projects" method="POST">
 		{{ csrf_field() }}
-		<div class="form-group">
-			<input type="text" name="title" placeholder="project title">
-		</div>
-		<div class="form-group">
-			<textarea name="description" placeholder="Project description"></textarea>
-		</div>
-		<div class="form-group">
-			<button type="submit">Submit</button>
-		</div>
-	</form>
+  <div class="form-group">
+    <label for="text">Project Title</label>
+    <input type="text" class="form-control" name="title" id="title" aria-describedby="text" placeholder="Your Project Title">
+    <small id="title" class="form-text text-muted">Your awesome project title will be set here</small>
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control" name="description" id="description" placeholder="Description"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 @endsection

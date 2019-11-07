@@ -15,17 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pages/crude','PagesController@crudeview')->name('crude');
-
-Route::get('/pages/sticky','PagesController@displayed')->name('sticky');
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/pages/test1','PagesController@test1')->name('test1');
 
-Route::get('/projects','ProjectsController@index');
-Route::post('/projects','ProjectsController@store');
-
-Route::get('/projects/create','ProjectsController@create');
+Route::resource('projects','ProjectsController');
