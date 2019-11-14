@@ -20,3 +20,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::resource('projects','ProjectsController');
+
+Route::resource('crude','CrudeController');

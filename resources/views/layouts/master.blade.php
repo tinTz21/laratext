@@ -35,7 +35,7 @@
         @show
         <div class="container">
             <nav class="navbar bg-light  navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="/pages/crude">STICK'ies</a>
+                <a class="navbar-brand" href="/crude">Tanzania Development Forum</a>
                 
                 <nav class="collapse navbar-collapse">
                     
