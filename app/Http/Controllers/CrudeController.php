@@ -35,13 +35,14 @@ class CrudeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        $crude=new Crude;
-        $crude->title=request('title');
-        $crude->project=request('project');
-        $crude->save();
-        return redirect('crude');
+        Crude::create(request()->validate([
+            'title'=> ['required','min:10'],
+            'project'=> ['required','min:20'],
+            ])
+        );
+        return redirect('crude'); 
     }
 
     /**
@@ -52,7 +53,7 @@ class CrudeController extends Controller
      */
     public function show(Crude $crude)
     {
-        return view('crude.show',compact('crude'));
+        return view('crude/show',compact('crude'));
     }
 
     /**
@@ -76,9 +77,7 @@ class CrudeController extends Controller
      */
     public function update(Crude $crude)
     {
-        $crude->title=request('title');
-        $crude->project=request('project');
-        $crude->save();
+        $crude->update(request(['title','project']));
         return redirect('crude');
     }
 

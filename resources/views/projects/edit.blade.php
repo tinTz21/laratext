@@ -21,7 +21,7 @@
 	<form method="POST" action="/projects/{{ $projects->id }}">
 		@method('DELETE')
 		@csrf
-		<button class="my-1" type="Delete Project" class="btn btn-danger">Delete Project</button>
+		<button class="my-1" type="Delete Project" class="btn btn-danger">Delete</button>
 	</form>
 </nav>
 </div>

@@ -5,10 +5,7 @@
 <div class="container">
 	<nav class="col-md">
 		@foreach ($projects as $projects)
- 	<h3>{{ $projects->title }}</h3>
- 	<p>{{ $projects->description }}</p>
- 	<p>post created at {{ $projects->created_at }}</p>
- 	<p>id number {{ $projects->id }}</p>
+ 	<h4><a href="/projects/{{ $projects->id }}">{{ $projects->title }}</a></h4>
  @endforeach
 	</nav>
 </div>
