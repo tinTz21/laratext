@@ -13,7 +13,7 @@
   <div class="form-group row">
     <label for="project" value="project" class="col-sm-2 col-form-label">Project:</label>
     <div class="col-sm-6">
-      <textarea name="project"  class="form-control {{ $errors->has('project') ? 'is-invalid' : '' }}" id="project" placeholder="Your Project Description">{{ old('project') }}</textarea>
+      <textarea name="project"  class="form-control {{ $errors->has('project') ? 'is-invalid' : '' }}" id="project" placeholder="Description of project Slogan i.e. Mission">{{ old('project') }}</textarea>
     </div>
   </div>
   <div class="form-group row">
