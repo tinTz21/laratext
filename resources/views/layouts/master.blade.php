@@ -30,26 +30,29 @@
 
     </head>
     <body>
-        @section('sidebar')
+        <!-- @section('sidebar') -->
 
-        @show
+        <!-- @show -->
         <div class="container">
             <nav class="navbar bg-light  navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="/crude">Tanzania Development Forum</a>
+                <a class="navbar-brand text-danger" href="/crude">TANZANIA DEVELOPMENT FORUM</a>
                 
                 <nav class="collapse navbar-collapse">
                     
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="/pages/sticky">STICKY</a>
+                            <a class="nav-link sm " href="#">STICKY</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/pages/crude">CRUDE</a>
+                            <a class="nav-link " href="#">CRUDE</a>
                         </li>
                     </ul>
                 </nav>
             </nav>
-            @yield('contents')
+            <div class="margin-right: 1rem">
+              @yield('contents') 
+            </div>
+
         </div>
     </body>
     </html>

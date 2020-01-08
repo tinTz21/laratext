@@ -17,7 +17,7 @@ class CreateTasksTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('crude_id');
             $table->boolean('completed')->default(false);
-            $table->string('body');
+            $table->text('task');
             $table->timestamps();
         });
     }

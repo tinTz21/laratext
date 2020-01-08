@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
 @section('contents')
-
-<form method="POST" action="/crude/{{ $crude->id }}">
+<div>
+  <form method="POST" action="/crude/{{ $crude->id }}">
   @csrf
   @method('PATCH')
   <div class="form-group row">
@@ -19,17 +19,18 @@
   </div>
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">UPDATE</button>
+      <button type="submit" class="btn btn-outline-primary">Update</button>
     </div>
   </div>
 </form>
 
 <form method="POST" action="/crude/{{ $crude->id }}">
-	@csrf
-	@method('DELETE')
-	<div class="col-sm-10">
-      <button type="submit" class="btn btn-danger">DELETE CONTENT</button>
+  @csrf
+  @method('DELETE')
+  <div class="col-sm-12">
+      <button type="submit" class="btn btn-outline-danger">Delete</button>
     </div>
 </form>
+</div>
 
 @endsection

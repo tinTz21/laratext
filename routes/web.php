@@ -22,3 +22,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('projects','ProjectsController');
 
 Route::resource('crude','CrudeController');
+
+Route::patch('task/{task}','CrudeTaskController@update');
+Route::post('crude/{crude}/tasks','CrudeTaskController@store');
+Route::patch('taxks/{task}','ProjectTaxkController@update');
+Route::post('projects/{project}/task','ProjectTaxkController@store');
